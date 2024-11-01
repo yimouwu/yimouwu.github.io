@@ -1,0 +1,19 @@
+title: "Yimou Wu"
+description: "Personal website of Yimou Wu"
+theme: jekyll-theme-cayman
+baseurl: ""
+url: "https://yimouwu.github.io"
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+header_pages:
+  - index.md
+  - education.md
+  - research.md
+  - internships.md
+  - projects.md
+  - coursework.md
+  - distinctions.md
+  - skills.md
