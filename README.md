@@ -1,25 +1,15 @@
----
-layout: default
-title: "Home"
----
+# Yimou Wu's Personal Website
 
-# Yimou Wu
+This is the source code for Yimou Wu's personal website. The website is built using Jekyll and hosted on GitHub Pages.
 
-**Email**: yimouwu@link.cuhk.edu.cn  
-**Mobile**: (86) 158-1180-3568  
-**Address**: 2001 Longxiang Boulevard, Longgang District, Shenzhen, Guangdong 518172  
-**GitHub**: [github.com/moumouta](https://github.com/moumouta)
+## Local Development
 
-![Profile Picture](/assets/images/profile.jpg)
+To run the website locally:
 
-Welcome to the personal website of **Yimou Wu**, an undergraduate student majoring in Computer Science and Engineering at The Chinese University of Hong Kong, Shenzhen.
+```bash
+bundle exec jekyll serve
+```
+The website will be available at http://localhost:4000.
 
-## Quick Links
-
-- [Education](/education)
-- [Research Experience](/research)
-- [Internship Experience](/internships)
-- [Projects](/projects)
-- [Coursework](/coursework)
-- [Distinctions](/distinctions)
-- [Skills & Interests](/skills)
+## License
+The content of this website is licensed under the MIT License.
