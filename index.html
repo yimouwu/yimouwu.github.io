@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Yimou Wu's Personal Website">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <!-- Include CSS and Font Awesome, Academicons -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -73,6 +72,10 @@
             color: #e91e63;
         }
 
+        .nav-links li a.active {
+            color: #e91e63;
+        }
+
         /* Main Content */
         .main-content {
             margin-top: 120px;
@@ -93,13 +96,19 @@
         }
 
         .top-section .right {
-            flex: 0 0 250px;
+            flex: 0 0 200px;
         }
 
         .top-section h1 {
             margin-top: 0;
             font-size: 2em;
             color: #4A75E6;
+        }
+
+        .top-section .right img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
 
         .affiliation {
@@ -210,7 +219,7 @@
                 <a href="https://www.linkedin.com/in/kevin-y-w-33aa0a315/"><i class="fab fa-linkedin"></i></a>
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">About Me</a></li>
+                <li><a href="index.html" class="active">about</a></li>
                 <li><a href="education.html">Education</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="research_internship.html">Research & Internship</a></li>
@@ -245,6 +254,16 @@
             </div>
         </div>
 
+        <!-- Biography Section -->
+        <div class="section">
+            <h2>Biography</h2>
+            <p>I am a Computer Science and Engineering undergraduate student at The Chinese University of Hong Kong,
+                Shenzhen. My research interests include robotics, machine learning, and brain-computer interfaces.</p>
+            <div class="contact-note">
+                Feel free to contact me by email if you are interested in discussing or collaborating with me.
+            </div>
+        </div>
+
         <!-- News Section -->
         <div class="section">
             <h2>News</h2>
@@ -256,7 +275,7 @@
                     <!-- Add more news items as needed -->
                 </ul>
             </div>
-            <div class="scrollable-hint">⬆ scrollable</div>
+
         </div>
 
         <!-- Education Section -->
@@ -286,15 +305,6 @@
             </table>
         </div>
 
-        <!-- Biography Section -->
-        <div class="section">
-            <h2>Biography</h2>
-            <p>I am a Computer Science and Engineering undergraduate student at The Chinese University of Hong Kong,
-                Shenzhen. My research interests include robotics, machine learning, and brain-computer interfaces.</p>
-            <div class="contact-note">
-                Feel free to contact me by email if you are interested in discussing or collaborating with me.
-            </div>
-        </div>
     </div>
 </body>
 

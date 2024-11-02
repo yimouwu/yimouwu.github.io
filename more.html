@@ -3,14 +3,112 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>More - Yimou Wu</title>
-    <!-- Include head content as before -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <style>
+        /* Include general styles */
+        body {
+            font-family: 'PT Serif', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Menu */
+        header {
+            width: 100%;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-menu {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .left-icons a {
+            color: #333;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.95em;
+            text-transform: lowercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #e91e63;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 120px;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #4A75E6;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navigation Menu -->
     <header>
-        <!-- Same as in index.html -->
+        <nav class="nav-menu">
+            <div class="left-icons">
+                <a href="mailto:yimouwu@link.cuhk.edu.cn"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://github.com/moumouta"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com/"><i class="ai ai-google-scholar"></i></a>
+                <a href="https://www.linkedin.com/in/kevin-y-w-33aa0a315/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="research_internship.html">Research & Internship</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="more.html" class="active">More</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Main Content -->

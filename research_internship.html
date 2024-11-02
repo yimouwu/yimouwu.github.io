@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Research & Internship - Yimou Wu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <style>
+        /* Include general styles from index.html */
+        body {
+            font-family: 'PT Serif', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Menu */
+        header {
+            width: 100%;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-menu {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .left-icons a {
+            color: #333;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.95em;
+            text-transform: lowercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #e91e63;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 120px;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #4A75E6;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        .entry {
+            margin-bottom: 20px;
+        }
+
+        .entry h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .entry img {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <header>
+        <nav class="nav-menu">
+            <div class="left-icons">
+                <a href="mailto:yimouwu@link.cuhk.edu.cn"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://github.com/moumouta"><i class="fab fa-github"></i></a>
+                <a href="https://scholar.google.com/"><i class="ai ai-google-scholar"></i></a>
+                <a href="https://www.linkedin.com/in/kevin-y-w-33aa0a315/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">about</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="research_internship.html" class="active">Research & Internship</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Research Experience Section -->
+        <div class="section">
+            <h2>Research Experience</h2>
+            <!-- Research Entry -->
+            <div class="entry">
+                <h3>
+                    Model Predictive Control (MPC) Development for Robot Manipulators
+                    <img src="assets/images/cuhk_logo.png" alt="CUHK Logo">
+                </h3>
+                <p><b>Undergraduate Research Assistant</b>, Supervisor: Prof. Huihuan Qian<br>
+                    Sep. 2022 - Current, Shenzhen, China</p>
+                <ul>
+                    <li>Combine MATLAB with CoppeliaSim to implement MPC-based joint control for a robotic arm and UAV;
+                        improved the robotic arm’s grasping algorithm, increasing precision by approximately 10%.</li>
+                    <li>Carry out pre-work by performing a comprehensive literature review on robotic arms, including
+                        both conventional and tendon-driven manipulators, to propose innovative ideas for advancing
+                        kinematic control during group meetings.</li>
+                    <li>Improve grasping precision, achieving high-precision docking and seamless object handoffs
+                        between the robotic arm, UAV, and vessel in dynamic environments.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Development of a Load Generator for Root Cause Analysis Benchmark</h3>
+                <p><b>Undergraduate Research Assistant</b>, Supervisor: Prof. Pinjia He<br>
+                    Mar. 2024 - Sep. 2024, Shenzhen, China</p>
+                <ul>
+                    <li>Upgraded a ticketing system’s web backend using Spring Boot and Java, handling multiple
+                        microservices and large datasets to support AIOps and testing functions.</li>
+                    <li>Developed a load generator in Go to simulate high volumes of web traffic and stress-test
+                        microservices, identifying bottlenecks and improving system resilience.</li>
+                    <li>Optimized the performance, scalability, and reliability of microservices based on the findings
+                        from stress tests, ensuring efficient handling of peak traffic and data loads.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>Electrocorticography (ECoG) and Speech Separation in Brain-Computer Interface Research</h3>
+                <p><b>Undergraduate Research Assistant</b>, Supervisor: Prof. Haizhou Li<br>
+                    Jan. 2023 - Nov. 2023, Shenzhen, China</p>
+                <ul>
+                    <li>Researched Signal-to-Noise Ratio (SNR) and Ideal Binary Mask (IBM) in speech separation, and
+                        assisted in experiments on Brain-Computer Interface (BCI) development using ECoG signals.</li>
+                    <li>Explored speech separation techniques, especially methods for multi-speaker separation using a
+                        single microphone, applying advanced techniques such as neural network-based models and
+                        spectrogram analysis to enhance speech separation accuracy.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Internship Experience Section -->
+        <div class="section">
+            <h2>Internship Experience</h2>
+            <!-- Internship Entry -->
+            <div class="entry">
+                <h3>
+                    Shenzhen Institute of Artificial Intelligence and Robotics for Society
+                    <img src="assets/images/airs_logo.jpeg" alt="AIRS Logo">
+                </h3>
+                <p><b>Undergraduate Research Assistant</b>, Supervisor: Ruoyu Xu<br>
+                    May 2024 - Nov. 2024, Shenzhen, China</p>
+                <ul>
+                    <li>Developed a motion capture-based MPC system in field experimental settings using CasADi and ROS
+                        for controlling a 7 Degrees of Freedom (DOF) robotic arm in UAV and vessel object transfers.
+                    </li>
+                    <li>Conducted extensive literature review to enhance the robust MPC algorithm, achieving a 10%
+                        improvement in grasp accuracy.</li>
+                    <li>Upgraded the grasping code to incorporate follow-and-grab functionality, significantly
+                        increasing robustness for successful grasping under shaking conditions.</li>
+                </ul>
+            </div>
+            <div class="entry">
+                <h3>
+                    ByteDance
+                    <img src="assets/images/bytedance_logo.jpeg" alt="ByteDance Logo">
+                </h3>
+                <p><b>Software Development Internship</b><br>
+                    Dec. 2023 - Feb. 2024, Remote</p>
+                <ul>
+                    <li>Implemented core functionalities for a news portal, including news list retrieval, type-based
+                        indexing, content and comment management, and news uploading, and developed interfaces for
+                        fetching splash ads and homepage popup ads.</li>
+                    <li>Enhanced proficiency in Java development tools, including JRE/JDK, JetBrains IDEA Community, and
+                        Maven, with experience in using Maven for effective dependency management.</li>
+                    <li>Designed and implemented a comprehensive database schema for user, content, comment, and ad
+                        tables, executed CRUD operations using JDBC, and introduced MyBatis-Plus for rapid development.
+                    </li>
+                    <li>Constructed an IoC model for Press, Ad, and Comments using the Spring framework, developed a
+                        functioning MVC model, initiated Spring Boot projects with a strong understanding of RESTful and
+                        CRUD principles, and created a RESTful API for the “Press” entity for JSON data retrieval via
+                        Postman.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
