@@ -41,40 +41,41 @@
             align-items: center;
         }
 
-        .left-icons {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .left-icons a {
+        .left-side {
+            font-size: 1.5em;
             color: #333;
-            font-size: 1.2em;
             text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .left-icons a:hover {
-            color: #e91e63;
         }
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             list-style: none;
             margin: 0;
             padding: 0;
+            margin-right: 20px;
+            /* Add some space from the right edge */
         }
 
         .nav-links li a {
             color: #333;
             text-decoration: none;
             font-size: 0.95em;
-            text-transform: lowercase;
             transition: color 0.3s ease;
         }
 
-        .nav-links li a:hover,
+        .nav-links li a:hover {
+            color: #e91e63;
+        }
+
+        .nav-links li a.active {
+            color: #e91e63;
+        }
+
+        .nav-links li a:hover {
+            color: #e91e63;
+        }
+
         .nav-links li a.active {
             color: #e91e63;
         }
@@ -215,12 +216,7 @@
     <!-- Navigation Menu -->
     <header>
         <nav class="nav-menu">
-            <div class="left-icons">
-                <a href="mailto:yimouwu@link.cuhk.edu.cn"><i class="fa-regular fa-envelope"></i></a>
-                <a href="https://github.com/yimouwu"><i class="fab fa-github"></i></a>
-                <a href="https://scholar.google.com/"><i class="ai ai-google-scholar"></i></a>
-                <a href="https://www.linkedin.com/in/kevin-y-w-33aa0a315/"><i class="fab fa-linkedin"></i></a>
-            </div>
+            <a href="index.html" class="left-side">Yimou Wu</a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">about</a></li>
                 <li><a href="education.html">Education</a></li>
@@ -250,6 +246,7 @@
                     <a href="https://scholar.google.com/"><i class="ai ai-google-scholar"></i></a>
                     <a href="https://www.linkedin.com/in/kevin-y-w-33aa0a315/"><i class="fab fa-linkedin"></i></a>
                 </div>
+                <!-- You can add stats or badges here if desired -->
             </div>
             <div class="right">
                 <img src="assets/images/profile.jpg" alt="Yimou Wu" class="profile-image">
@@ -274,8 +271,10 @@
                     <li>[03/2024] Started research assistant position at Prof. Huihuan Qian's lab.</li>
                     <li>[01/2024] Joined Development of a Load Generator project.</li>
                     <li>[08/2023] Completed summer program at UC Berkeley.</li>
+                    <!-- Add more news items as needed -->
                 </ul>
             </div>
+
         </div>
 
         <!-- Education Section -->
@@ -304,6 +303,7 @@
                 </tr>
             </table>
         </div>
+
     </div>
 </body>
 
