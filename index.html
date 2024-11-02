@@ -3,190 +3,296 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yimou Wu (吴贻谋)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yimou Wu's Personal Website">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <!-- Include CSS and Font Awesome, Academicons -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <style>
+        /* General Styles */
         body {
             font-family: 'PT Serif', serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-        }
-
-        .main-container {
+            color: #333;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+        }
+
+        /* Navigation Menu */
+        header {
+            width: 100%;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-menu {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .left-icons a {
+            color: #333;
+            font-size: 1.2em;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.95em;
+            text-transform: lowercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #e91e63;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 120px;
+            padding: 20px;
+        }
+
+        /* Top Section */
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             gap: 40px;
+            margin-bottom: 40px;
         }
 
-        .profile-section {
-            flex: 0 0 300px;
-        }
-
-        .content-section {
+        .top-section .left {
             flex: 1;
         }
 
-        .profile-image {
-            width: 100%;
-            border-radius: 10px;
+        .top-section .right {
+            flex: 0 0 250px;
+        }
+
+        .top-section h1 {
+            margin-top: 0;
+            font-size: 2em;
+            color: #4A75E6;
+        }
+
+        .affiliation {
             margin-bottom: 20px;
+        }
+
+        .affiliation p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+
+        .social-icons {
+            margin: 20px 0;
         }
 
         .social-icons a {
             color: #333;
             margin-right: 15px;
-            font-size: 20px;
+            font-size: 22px;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
+        .social-icons a:hover {
+            color: #e91e63;
+        }
+
+        .stats {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-item {
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        /* Sections */
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
+        .section h2 {
+            color: #4A75E6;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        /* News Section */
         .news-scroll {
-            height: 200px;
+            height: 150px;
             overflow-y: auto;
-            border: 1px solid #eee;
+            font-size: 14px;
+        }
+
+        .news-scroll ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .news-scroll li {
+            margin-bottom: 10px;
+        }
+
+        .scrollable-hint {
+            font-size: small;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        /* Education Section */
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .education-table td {
+            vertical-align: top;
             padding: 10px;
+        }
+
+        .education-table img {
+            width: 150px;
+        }
+
+        /* Contact Note */
+        .contact-note {
+            color: #e74c3c;
+            font-style: italic;
+            margin: 20px 0;
         }
     </style>
 </head>
 
 <body>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html">About</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="awards.html">Awards & Honors</a></li>
-        </ul>
-    </nav>
-    <div class="main-container">
-        <div class="profile-section">
-            <img src="assets/images/profile.jpg" alt="Yimou Wu" class="profile-image">
-            <h1>Yimou Wu (吴贻谋)</h1>
-
-
-            <div class="social-icons">
-                <a href="mailto:yimouwu0@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-                <a href="https://github.com/yimouwu"><i class="fa-brands fa-github"></i></a>
+    <!-- Navigation Menu -->
+    <header>
+        <nav class="nav-menu">
+            <div class="left-icons">
+                <a href="mailto:yimouwu@link.cuhk.edu.cn"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://github.com/moumouta"><i class="fab fa-github"></i></a>
                 <a href="https://scholar.google.com/"><i class="ai ai-google-scholar"></i></a>
-                <a href="https://www.linkedin.com/in/kevin-y-w-33aa0a315/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/kevin-y-w-33aa0a315/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="research_internship.html">Research & Internship</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Section -->
+        <div class="top-section">
+            <div class="left">
+                <h1>Yimou Wu (吴贻谋)</h1>
+                <div class="affiliation">
+                    <p>4th-year Undergraduate Student</p>
+                    <p>Computer Science and Engineering</p>
+                    <p><a href="https://www.cuhk.edu.cn/en" target="_blank">The Chinese University of Hong Kong,
+                            Shenzhen (CUHK-SZ)</a></p>
+                </div>
+                <div class="social-icons">
+                    <a href="mailto:yimouwu@link.cuhk.edu.cn"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="https://github.com/moumouta"><i class="fab fa-github"></i></a>
+                    <a href="https://scholar.google.com/"><i class="ai ai-google-scholar"></i></a>
+                    <a href="https://www.linkedin.com/in/kevin-y-w-33aa0a315/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <!-- You can add stats or badges here if desired -->
+            </div>
+            <div class="right">
+                <img src="assets/images/profile.jpg" alt="Yimou Wu" class="profile-image">
             </div>
         </div>
 
-        <div class="content-section">
-            <div class="section">
-                <h2>About Me</h2>
-                <p>I am a Computer Science and Engineering undergraduate student at The Chinese University of Hong Kong,
-                    Shenzhen. My research interests include robotics, machine learning, and brain-computer interfaces.
-                </p>
+        <!-- News Section -->
+        <div class="section">
+            <h2>News</h2>
+            <div class="news-scroll">
+                <ul>
+                    <li>[03/2024] Started research assistant position at Prof. Huihuan Qian's lab.</li>
+                    <li>[01/2024] Joined Development of a Load Generator project.</li>
+                    <li>[08/2023] Completed summer program at UC Berkeley.</li>
+                    <!-- Add more news items as needed -->
+                </ul>
             </div>
+            <div class="scrollable-hint">⬆ scrollable</div>
+        </div>
 
-            <div class="section">
-                <h2>Education</h2>
-                <div class="education-brief">
-                    <div class="edu-item">
-                        <div class="school-header">
-                            <h3>The Chinese University of Hong Kong, Shenzhen</h3>
-                        </div>
-                        <div class="school-content">
-                            <div class="school-logo">
-                                <img src="assets/images/cuhk_logo.png" alt="CUHK-SZ Logo" width="60">
-                            </div>
-                            <div class="school-info">
-                                <p class="degree">B.Eng. in Computer Science and Engineering</p>
-                                <p class="date">Sep. 2021 - May 2025</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Education Section -->
+        <div class="section">
+            <h2>Education</h2>
+            <table class="education-table">
+                <tr>
+                    <td width="200">
+                        <img src="assets/images/cuhk_logo.png" alt="CUHK-SZ Logo">
+                    </td>
+                    <td>
+                        <p><b>The Chinese University of Hong Kong, Shenzhen</b></p>
+                        <div>Bachelor of Computer Science and Engineering (CSE)</div>
+                        <div>Sep. 2021 - May 2025 (Expected)</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200">
+                        <img src="assets/images/uc_berkeley_logo.png" alt="UC Berkeley Logo">
+                    </td>
+                    <td>
+                        <p><b>University of California, Berkeley</b></p>
+                        <div>Summer International Undergraduate Visitor</div>
+                        <div>Jun. 2023 - Aug. 2023</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
-                    <div class="edu-item">
-                        <div class="school-header">
-                            <h3>University of California, Berkeley</h3>
-                        </div>
-                        <div class="school-content">
-                            <div class="school-logo">
-                                <img src="assets/images/uc_berkeley_logo.png" alt="UC Berkeley Logo" width="60">
-                            </div>
-                            <div class="school-info">
-                                <p class="degree">Summer International Undergraduate Visitor</p>
-                                <p class="date">Jun. 2023 - Aug. 2023</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <style>
-                .education-brief {
-                    margin-top: 20px;
-                }
-
-                .edu-item {
-                    margin-bottom: 30px;
-                }
-
-                .school-header {
-                    margin-bottom: 15px;
-                }
-
-                .school-header h3 {
-                    margin: 0;
-                    font-size: 1.2em;
-                    color: #333;
-                }
-
-                .school-content {
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 20px;
-                    padding-left: 10px;
-                }
-
-                .school-logo {
-                    flex-shrink: 0;
-                }
-
-                .school-logo img {
-                    width: 60px;
-                    height: auto;
-                }
-
-                .school-info {
-                    flex-grow: 1;
-                }
-
-                .school-info p {
-                    margin: 5px 0;
-                }
-
-                .school-info .degree {
-                    font-weight: 500;
-                }
-
-                .school-info .date {
-                    color: #666;
-                    font-size: 0.9em;
-                }
-            </style>
-
-            <div class="section">
-                <h2>News</h2>
-                <div class="news-scroll">
-                    <ul>
-                        <li>[2024.03] Started research assistant position at Prof. Huihuan Qian's lab</li>
-                        <li>[2024.01] Joined Development of a Load Generator project</li>
-                        <li>[2023.08] Completed summer program at UC Berkeley</li>
-                    </ul>
-                </div>
+        <!-- Biography Section -->
+        <div class="section">
+            <h2>Biography</h2>
+            <p>I am a Computer Science and Engineering undergraduate student at The Chinese University of Hong Kong,
+                Shenzhen. My research interests include robotics, machine learning, and brain-computer interfaces.</p>
+            <div class="contact-note">
+                Feel free to contact me by email if you are interested in discussing or collaborating with me.
             </div>
         </div>
     </div>
