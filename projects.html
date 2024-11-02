@@ -37,6 +37,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 100px;
     }
 
     .left-icons {
@@ -54,8 +55,10 @@
       display: flex;
       gap: 25px;
       list-style: none;
-      margin: 0;
+      margin: 1px;
       padding: 0;
+      margin-right: auto;
+      /* 让导航按钮靠左对齐 */
     }
 
     .nav-links li a {
@@ -73,7 +76,7 @@
 
     /* Main Content */
     .main-content {
-      margin-top: 120px;
+      margin-top: 66px;
       padding: 20px;
     }
 
@@ -133,9 +136,9 @@
 
   <!-- Main Content -->
   <div class="main-content">
+    <!-- Projects Section -->
     <div class="section">
       <h2>Projects</h2>
-      <!-- Project Entry -->
       <div class="entry">
         <h3>SSC INTERN – An Internship Platform for CUHK-Shenzhen</h3>
         <p><b>Team Leader</b><br>
@@ -149,8 +152,78 @@
             universities.</li>
         </ul>
       </div>
-      <!-- Add other projects -->
-      <!-- ... -->
+    </div>
+
+    <!-- Coursework Projects Section -->
+    <div class="section">
+      <h2>Coursework Projects</h2>
+
+      <div class="entry">
+        <h3>DDA3020 Machine Learning</h3>
+        <p><b>The Chinese University of Hong Kong</b><br>
+          Jan. 2024 - Jun. 2024</p>
+        <ul>
+          <li>Built FCNN and CNN from scratch in NumPy to classify the FashionMNIST dataset, implementing forward and
+            backward propagation for training</li>
+          <li>Developed and implemented supervised learning models, including Linear Regression, Logistic Regression,
+            and Support Vector Machine (SVM) from scratch, using real-world datasets for tasks such as weather
+            prediction and star classification</li>
+          <li>Designed and implemented unsupervised learning algorithms, including k-means clustering, k-means++
+            initialization, and GMM using the Expectation-Maximization algorithm, enhancing understanding of clustering
+            techniques</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>CSC3050 Computer Architecture</h3>
+        <p><b>The Chinese University of Hong Kong</b><br>
+          Sep. 2023 - Jan. 2024</p>
+        <ul>
+          <li>Developed a MIPS assembler in C++, converting MIPS assembly language to machine code, supporting R, I, and
+            J-type instructions, and utilizing label tables for address handling</li>
+          <li>Implemented a MIPS simulator to execute binary files by simulating memory, registers, and the program
+            counter, performing step-by-step execution of MIPS instructions</li>
+          <li>Designed and built a 5-stage pipelined CPU in Verilog, including an ALU for arithmetic, logical, and
+            branching instructions, with overflow, zero, and negative flag handling, ensuring proper data and control
+            hazard management</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <h3>CS61B Data Structures and Programming Methodology</h3>
+        <p><b>University of California, Berkeley</b><br>
+          Jun. 2023 - Aug. 2023</p>
+
+        <h4>Project 0: 2048 Game</h4>
+        <ul>
+          <li>Implemented a 2048 game using Java, modifying the Model class to support game logic such as checking
+            available moves and handling tile shifts</li>
+          <li>Utilized MVC and Observer design patterns to separate game logic from user interactions and GUI updates
+          </li>
+        </ul>
+
+        <h4>Project 1: Deques</h4>
+        <ul>
+          <li>Developed a double-ended queue (Deque) in Java using both Linked List and Array-based implementations</li>
+          <li>Enhanced the Deque class with additional functionality and optimized performance for operations like
+            adding, removing, and accessing elements from both ends</li>
+        </ul>
+
+        <h4>Project 2: Gitlet (Version-Control System)</h4>
+        <ul>
+          <li>Built a simplified version of Git called "Gitlet" to implement version control functionality such as
+            committing, branching, and merging</li>
+          <li>Ensured file persistence and tracked the history of directory changes, allowing for restore and merge
+            operations between different file versions</li>
+        </ul>
+
+        <h4>Project 3: BYOW (Engine for Generating Explorable Worlds)</h4>
+        <ul>
+          <li>Designed and implemented a 2D tile-based world exploration engine</li>
+          <li>Generated pseudorandom worlds with interactable features, avatar control via keyboard, and save/load
+            functionality using a deterministic engine based on seeded randomness</li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
