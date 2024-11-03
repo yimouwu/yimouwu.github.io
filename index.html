@@ -95,7 +95,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 40px;
+            gap: 60px;
             margin-bottom: 40px;
         }
 
@@ -104,7 +104,7 @@
         }
 
         .top-section .right {
-            flex: 0 0 247px;
+            flex: 0 0 287px;
         }
 
         .top-section h1 {
@@ -213,6 +213,116 @@
             font-style: italic;
             margin: 20px 0;
         }
+
+        /*Publications*/
+        .publication-entry {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+
+        .publication-image {
+            flex: 0 0 200px;
+        }
+
+        .publication-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .publication-content {
+            flex: 1;
+        }
+
+        .publication-content h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .publication-links {
+            margin-top: 10px;
+        }
+
+        .publication-links a {
+            margin-right: 15px;
+            color: #4A75E6;
+            text-decoration: none;
+        }
+
+        /*research & internship*/
+        .research-entry {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .research-image {
+            flex: 0 0 100px;
+        }
+
+        .research-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .research-content {
+            flex: 1;
+        }
+
+        .research-content h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .research-group {
+            border: 1px solid #eee;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .group-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .group-header .research-image {
+            margin-right: 20px;
+        }
+
+        .institution-name {
+            margin: 0;
+            color: #333;
+        }
+
+        .research-entries .research-entry {
+            padding-left: 20px;
+            border-left: 2px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .research-entries .research-entry:last-child {
+            margin-bottom: 30px;
+        }
+
+        .research-group .research-content {
+            margin-left: 0;
+        }
+
+        .section h2 {
+            margin-top: 40px;
+            /* Add space between sections */
+        }
+
+        .section h2:first-child {
+            margin-top: 0;
+            /* Remove top margin for first heading */
+        }
     </style>
 </head>
 
@@ -306,6 +416,93 @@
                     </td>
                 </tr>
             </table>
+        </div>
+
+        <!-- Publications Section -->
+        <div class="section">
+            <h2>Publications</h2>
+            <div class="publication-entry">
+                <!--
+                <div class="publication-image">
+                    <img src="assets/images/paper1.jpg" alt="Paper 1">
+                </div>
+                <div class="publication-content">
+                    <h3>An Example Paper Title About Robotics Control</h3>
+                    <p>John Doe, <strong>Yimou Wu</strong>, Jane Smith</p>
+                    <p>Brief description of the paper's contribution to robotics control systems.</p>
+                    <div class="publication-links">
+                        <a href="#">Paper</a>
+                        <a href="#">Code</a>
+                        <a href="#">Video</a>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+
+        <!-- Research & Internship Section -->
+        <div class="section">
+            <h2>Research Experience</h2>
+
+            <!-- CUHK Research Experiences -->
+            <div class="group-header">
+                <div class="research-image">
+                    <img src="assets/images/cuhk_logo.png" alt="CUHK Logo">
+                </div>
+                <h3 class="institution-name">Chinese University of Hong Kong (CUHK)</h3>
+            </div>
+
+            <div class="research-entries">
+                <div class="research-entry">
+                    <div class="research-content">
+                        <h3>Model Predictive Control (MPC) Development</h3>
+                        <p>Supervisor: Prof. Huihuan Qian</p>
+                        <p class="duration">Shenzhen, China · Sep 2022 - Present</p>
+                    </div>
+                </div>
+
+                <div class="research-entry">
+                    <div class="research-content">
+                        <h3>Load Generator Development for Root Cause Analysis</h3>
+                        <p>Supervisor: Prof. Pinjia He</p>
+                        <p class="duration">Shenzhen, China · Mar 2024 - Sep 2024</p>
+                    </div>
+                </div>
+
+                <div class="research-entry">
+                    <div class="research-content">
+                        <h3>Brain-Computer Interface Research</h3>
+                        <p>Supervisor: Prof. Haizhou Li</p>
+                        <p class="duration">Shenzhen, China · Jan 2023 - Nov 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Internship Experience</h2>
+
+            <!-- AIRS Research -->
+            <div class="research-entry">
+                <div class="research-image">
+                    <img src="assets/images/airs_logo.jpeg" alt="AIRS Logo">
+                </div>
+                <div class="research-content">
+                    <h3>AIRS Research Assistant</h3>
+                    <p>Shenzhen Institute of Artificial Intelligence and Robotics for Society (AIRS)</p>
+                    <p>Supervisor: Ruoyu Xu</p>
+                    <p class="duration">Shenzhen, China · May 2024 - Nov 2024</p>
+                </div>
+            </div>
+
+            <div class="research-entry">
+                <div class="research-image">
+                    <img src="assets/images/bytedance_logo.jpeg" alt="ByteDance Logo">
+                </div>
+                <div class="research-content">
+                    <h3>Software Development Intern</h3>
+                    <p>ByteDance</p>
+                    <p class="duration">Remote · Dec 2023 - Feb 2024</p>
+                </div>
+            </div>
         </div>
 
     </div>
