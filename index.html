@@ -195,16 +195,41 @@
         /* Education Section */
         .education-table {
             width: 90%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            /* 防止边框合并，便于添加行间距 */
+            /* border-spacing: 0 15px; */
+            /* 每行上下增加 15px 间距 */
         }
 
         .education-table td {
-            vertical-align: top;
-            padding: 9px;
+            vertical-align: middle;
+            /* Vertically center-align content */
+            /* 设置垂直居中 */
+            padding: 10px;
+            /* 增加内边距，让内容更有呼吸感 */
+            padding-bottom: 15px;
+            /* Add spacing below each row */
+        }
+
+        .education-table td p {
+            margin: 0;
+            /* 去除上下 margin */
+            padding: -10;
+            /* 确保没有 padding */
+        }
+
+        .education-table td div {
+            margin: 0;
+            /* 去除上下 margin */
+            padding: 0;
+            /* 确保没有 padding */
         }
 
         .education-table img {
-            width: 135px;
+            /* 调小宽度 */
+            width: 100px;
+            /* 保持图片比例 */
+            height: auto;
         }
 
         /* Contact Note */
