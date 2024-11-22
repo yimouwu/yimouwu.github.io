@@ -99,11 +99,72 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: -10px;
         }
 
         .entry img {
-            width: 100px;
+            width: 77px;
             height: auto;
+        }
+
+        /* Image section */
+        .image-grid {
+            display: flex;
+            gap: 17px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            /* 整体向右移动 */
+            padding-left: 37px;
+            /* 图片网格整体与下方分隔开 */
+            margin-bottom: 30px;
+        }
+
+        .image-grid img,
+        .image-grid video {
+            width: 110px;
+            height: 110px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* 调整左边距，让图片离左边更远 */
+            margin-left: 2px;
+        }
+
+        .image-grid img:hover,
+        .image-grid video:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal img,
+        .modal video {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -144,26 +205,40 @@
                     Sep. 2022 - Current, Shenzhen, China</p>
                 <ul>
                     <li>Combine MATLAB with CoppeliaSim to implement MPC-based joint control for a robotic arm and UAV;
-                        improved the robotic arm’s grasping algorithm, increasing precision by approximately 10%.</li>
+                        improved the robotic arm's grasping algorithm, increasing precision by approximately 10%.</li>
                     <li>Carry out pre-work by performing a comprehensive literature review on robotic arms, including
                         both conventional and tendon-driven manipulators, to propose innovative ideas for advancing
                         kinematic control during group meetings.</li>
                     <li>Improve grasping precision, achieving high-precision docking and seamless object handoffs
                         between the robotic arm, UAV, and vessel in dynamic environments.</li>
                 </ul>
+
+                <!-- Image/Video Section -->
+                <div class="image-grid">
+                    <img src="assets/images/simulation-screenshot-photo-1.png" alt="simulation-screenshot-photo-1">
+                    <img src="assets/images/HuihuanQian-Lab-photo-1.jpg" alt="HuihuanQian-Lab-photo-1">
+                    <img src="assets/images/HuihuanQian-Lab-photo-2.jpg" alt="HuihuanQian-Lab-photo-2">
+                    <video src="assets/videos/HuihuanQian-Lab-video-1.MOV" controls></video>
+                </div>
             </div>
             <div class="entry">
                 <h3>Development of a Load Generator for Root Cause Analysis Benchmark</h3>
                 <p><b>Undergraduate Research Assistant</b>, Supervisor: Prof. Pinjia He<br>
                     Mar. 2024 - Sep. 2024, Shenzhen, China</p>
                 <ul>
-                    <li>Upgraded a ticketing system’s web backend using Spring Boot and Java, handling multiple
+                    <li>Upgraded a ticketing system's web backend using Spring Boot and Java, handling multiple
                         microservices and large datasets to support AIOps and testing functions.</li>
                     <li>Developed a load generator in Go to simulate high volumes of web traffic and stress-test
                         microservices, identifying bottlenecks and improving system resilience.</li>
                     <li>Optimized the performance, scalability, and reliability of microservices based on the findings
                         from stress tests, ensuring efficient handling of peak traffic and data loads.</li>
                 </ul>
+
+                <!-- Image/Video Section -->
+                <div class="image-grid">
+                    <img src="assets/images/Load-Generator-photo-1.jpeg" alt="Load-Generator-photo-1">
+                    <img src="assets/images/LoadGenerator-photo-2.png" alt="LoadGenerator-photo-2">
+                </div>
             </div>
             <div class="entry">
                 <h3>Electrocorticography (ECoG) and Speech Separation in Brain-Computer Interface Research</h3>
@@ -199,6 +274,12 @@
                     <li>Upgraded the grasping code to incorporate follow-and-grab functionality, significantly
                         increasing robustness for successful grasping under shaking conditions.</li>
                 </ul>
+
+                <!-- Image/Video Section -->
+                <div class="image-grid">
+                    <img src="assets/images/AIRS-photo-1.jpg" alt="AIRS-photo-1">
+                    <img src="assets/images/AIRS-photo-2.jpg" alt="AIRS-photo-2">
+                </div>
             </div>
             <div class="entry">
                 <h3>
@@ -221,6 +302,11 @@
                         CRUD principles, and created a RESTful API for the “Press” entity for JSON data retrieval via
                         Postman.</li>
                 </ul>
+
+                <!-- Image/Video Section -->
+                <div class="image-grid">
+                    <img src="assets/images/Bytedance-IC.jpg" alt="AIRS-photo-1">
+                </div>
             </div>
         </div>
     </div>
