@@ -94,22 +94,24 @@
         .top-section {
             display: flex;
             flex-wrap: wrap;
-            /* 允许子元素换行 */
-            justify-content: space-between;
             align-items: flex-start;
-            gap: 47px;
+            gap: 20px;
             margin-bottom: 40px;
         }
 
         .top-section .left {
-            flex: 1 1 60%;
-            /* 允许左侧内容在必要时调整宽度 */
+            /* flex: 1 1 60%; */
+            flex: 1 1 auto;
+            /* 左侧区域可以增长，初始大小根据内容自动调整 */
+            min-width: 300px;
+            /* 设置左侧区域的最小宽度，防止过窄 */
         }
 
         .top-section .right {
-            /* flex: 0 0 367px; */
-            flex: 0 0 250px;
-            /* Adjusted width */
+            flex: 0 0 auto;
+            /* 右侧区域保持其内容所需的尺寸 */
+            width: 250px;
+            /* 固定宽度 */
             position: relative;
         }
 
@@ -206,7 +208,7 @@
 
         .carousel-inner {
             display: flex;
-            transition: transform 0.5s ease;
+            transition: transform 0.7s ease;
         }
 
         .carousel-inner img {
@@ -218,8 +220,8 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 2em;
-            color: rgba(0, 0, 0, 0.5);
+            font-size: 1em;
+            color: rgba(244, 240, 240, 0.5);
             text-decoration: none;
             padding: 0 10px;
             cursor: pointer;
@@ -234,7 +236,9 @@
             right: 0;
         }
 
-        .carousel-control:hover {
+        */
+
+        /* .carousel-control:hover {
             color: rgba(0, 0, 0, 0.8);
         }
 
@@ -697,6 +701,25 @@
                 showImage(index);
             });
         });
+    </script>
+
+    <!-- WeChat QR Code Modal -->
+    <div id="wechatModal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+        <div style="position:relative;">
+            <img src="assets/images/WechatFriendQRCode.jpg" alt="WeChat QR Code" style="max-width:90%; max-height:90%;">
+            <span onclick="closeWeChatQRCode()"
+                style="position:absolute; top:10px; right:10px; color:#fff; font-size:30px; cursor:pointer;">&times;</span>
+        </div>
+    </div>
+
+    <script>
+        function showWeChatQRCode() {
+            document.getElementById('wechatModal').style.display = 'flex';
+        }
+        function closeWeChatQRCode() {
+            document.getElementById('wechatModal').style.display = 'none';
+        }
     </script>
 </body>
 
