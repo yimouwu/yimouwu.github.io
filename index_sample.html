@@ -8,6 +8,7 @@
     <meta name="description" content="Yimou Wu's Personal Website">
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Font Awesome and Academicons CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <style>
@@ -40,7 +41,6 @@
             justify-content: space-between;
             align-items: center;
             gap: 100px;
-            /* 添加这行，增加左侧标题和导航按钮之间的间距 */
         }
 
         .left-side {
@@ -48,7 +48,6 @@
             color: #333;
             text-decoration: none;
             flex-shrink: 0;
-            /* 防止文字被压缩 */
         }
 
         .nav-links {
@@ -58,7 +57,6 @@
             margin: 4px;
             padding: 0;
             margin-right: auto;
-            /* 让导航按钮靠左对齐 */
         }
 
         .nav-links li a {
@@ -66,20 +64,10 @@
             text-decoration: none;
             font-size: 0.95em;
             transition: color 0.3s ease;
+            text-transform: lowercase;
         }
 
-        .nav-links li a:hover {
-            color: #e91e63;
-        }
-
-        .nav-links li a.active {
-            color: #e91e63;
-        }
-
-        .nav-links li a:hover {
-            color: #e91e63;
-        }
-
+        .nav-links li a:hover,
         .nav-links li a.active {
             color: #e91e63;
         }
@@ -93,8 +81,6 @@
         /* Top Section */
         .top-section {
             display: flex;
-            flex-wrap: wrap;
-            /* 允许子元素换行 */
             justify-content: space-between;
             align-items: flex-start;
             gap: 47px;
@@ -102,27 +88,13 @@
         }
 
         .top-section .left {
-            flex: 1 1 60%;
-            /* 允许左侧内容在必要时调整宽度 */
+            flex: 1;
         }
 
         .top-section .right {
-            /* flex: 0 0 367px; */
             flex: 0 0 250px;
             /* Adjusted width */
             position: relative;
-        }
-
-        @media (max-width: 800px) {
-            .top-section {
-                flex-direction: column;
-            }
-
-            .top-section .left,
-            .top-section .right {
-                flex: none;
-                width: 100%;
-            }
         }
 
         /* Carousel Styles */
@@ -150,12 +122,6 @@
             margin-top: 0;
             font-size: 2em;
             color: #4A75E6;
-        }
-
-        .top-section .right img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
         }
 
         .affiliation {
@@ -194,48 +160,6 @@
             padding: 5px 10px;
             border-radius: 5px;
             font-size: 0.9em;
-        }
-
-        /* Carousel Styles */
-        .carousel {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-inner img {
-            width: 100%;
-            flex-shrink: 0;
-        }
-
-        .carousel-control {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2em;
-            color: rgba(0, 0, 0, 0.5);
-            text-decoration: none;
-            padding: 0 10px;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .carousel-control.prev {
-            left: 0;
-        }
-
-        .carousel-control.next {
-            right: 0;
-        }
-
-        .carousel-control:hover {
-            color: rgba(0, 0, 0, 0.8);
         }
 
         /* Sections */
@@ -277,39 +201,26 @@
         .education-table {
             width: 90%;
             border-collapse: separate;
-            /* 防止边框合并，便于添加行间距 */
-            /* border-spacing: 0 15px; */
-            /* 每行上下增加 15px 间距 */
         }
 
         .education-table td {
             vertical-align: middle;
-            /* Vertically center-align content */
-            /* 设置垂直居中 */
             padding: 10px;
-            /* 增加内边距，让内容更有呼吸感 */
             padding-bottom: 15px;
-            /* Add spacing below each row */
         }
 
         .education-table td p {
             margin: 0;
-            /* 去除上下 margin */
             padding: -10;
-            /* 确保没有 padding */
         }
 
         .education-table td div {
             margin: 0;
-            /* 去除上下 margin */
             padding: 0;
-            /* 确保没有 padding */
         }
 
         .education-table img {
-            /* 调小宽度 */
             width: 100px;
-            /* 保持图片比例 */
             height: auto;
         }
 
@@ -422,12 +333,10 @@
 
         .section h2 {
             margin-top: 40px;
-            /* Add space between sections */
         }
 
         .section h2:first-child {
             margin-top: 0;
-            /* Remove top margin for first heading */
         }
     </style>
     <!-- Carousel Script -->
@@ -518,17 +427,12 @@
                 <div class="contact-note">
                     I am currently applying for Ph.D. and Master's programs starting in Fall 2025. I would be grateful
                     for any opportunity to discuss potential collaborations or receive your guidance.
-                    Please feel free to contact me by email if you have any suggestions or advice.
                 </div>
             </div>
             <div class="right">
                 <div class="carousel">
-                    <div class="carousel-inner">
-                        <img src="assets/images/profile_A.jpeg" alt="Yimou Wu" class="profile-image active">
-                        <img src="assets/images/profile_C.jpeg" alt="Yimou Wu" class="profile-image">
-                    </div>
-                    <a class="carousel-control prev" href="#">&#10094;</a>
-                    <a class="carousel-control next" href="#">&#10095;</a>
+                    <img src="assets/images/profile_A.jpeg" alt="Yimou Wu">
+                    <img src="assets/images/profile_B.jpeg" alt="Yimou Wu">
                 </div>
             </div>
         </div>
@@ -589,19 +493,7 @@
             <h2>Selected Publications</h2>
             <div class="publication-entry">
                 <!--
-                <div class="publication-image">
-                    <img src="assets/images/paper1.jpg" alt="Paper 1">
-                </div>
-                <div class="publication-content">
-                    <h3>An Example Paper Title About Robotics Control</h3>
-                    <p>John Doe, <strong>Yimou Wu</strong>, Jane Smith</p>
-                    <p>Brief description of the paper's contribution to robotics control systems.</p>
-                    <div class="publication-links">
-                        <a href="#">Paper</a>
-                        <a href="#">Code</a>
-                        <a href="#">Video</a>
-                    </div>
-                </div>
+                Add publications here if available.
                 -->
             </div>
         </div>
@@ -610,93 +502,104 @@
         <div class="section">
             <h2>Research Experience</h2>
 
-            <!-- CUHK Research Experiences -->
-            <div class="group-header">
+            <!-- Research Entry -->
+            <div class="research-entry">
                 <div class="research-image">
                     <img src="assets/images/cuhk_logo.png" alt="CUHK Logo">
                 </div>
-                <h3 class="institution-name">The Chinese University of Hong Kong, Shenzhen </h3>
-            </div>
-
-            <div class="research-entries">
-                <div class="research-entry">
-                    <div class="research-content">
-                        <h3>Model Predictive Control (MPC) Development for Robot Manipulators</h3>
-                        <p>Supervisor: Prof. Huihuan Qian & Postdoc Ruoyu Xu</p>
-                        <p class="duration">Shenzhen, China · Sep 2022 - Present</p>
-                    </div>
-                </div>
-
-                <div class="research-entry">
-                    <div class="research-content">
-                        <h3>Development of a Load Generator for Root Cause Analysis Benchmark</h3>
-                        <p>Supervisor: Prof. Pinjia He & Dr. Aoyang Fang</p>
-                        <p class="duration">Shenzhen, China · Mar 2024 - Sep 2024</p>
-                    </div>
-                </div>
-
-                <div class="research-entry">
-                    <div class="research-content">
-                        <h3>Electrocorticography (ECoG) and Speech Separation in Brain-Computer Interface Research</h3>
-                        <p>Supervisor: Prof. Haizhou Li & Dr. Meng Ge & Dr. Siqi Cai</p>
-                        <p class="duration">Shenzhen, China · Jan 2023 - Nov 2023</p>
-                    </div>
-                </div>
-            </div>
-
-            <h2>Internship Experience</h2>
-
-            <!-- AIRS Research -->
-            <div class="research-entry">
-                <div class="research-image">
-                    <img src="assets/images/airs_logo.jpeg" alt="AIRS Logo">
-                </div>
                 <div class="research-content">
-                    <h3>Shenzhen Institute of Artificial Intelligence and Robotics for Society (AIRS)</h3>
-                    <p>Undergraduate Research Assistant</p>
-                    <p>Supervisor: Ruoyu Xu</p>
-                    <p class="duration">Shenzhen, China · May 2024 - Nov 2024</p>
+                    <h3>Model Predictive Control (MPC) Development for Robot Manipulators</h3>
+                    <p><b>Undergraduate Research Assistant</b>, Supervisor: Prof. Huihuan Qian & Postdoc Ruoyu Xu<br>
+                        Sep. 2022 - Present, Shenzhen, China</p>
+                    <ul>
+                        <li>Combined MATLAB with CoppeliaSim to implement MPC-based joint control for a robotic arm and
+                            UAV; improved the robotic arm's grasping algorithm, increasing precision by approximately
+                            10%.</li>
+                        <li>Performed comprehensive literature review on robotic arms to propose innovative ideas for
+                            advancing kinematic control during group meetings.</li>
+                        <li>Achieved high-precision docking and seamless object handoffs between the robotic arm, UAV,
+                            and vessel in dynamic environments.</li>
+                    </ul>
+                    <!-- Image/Video Section -->
+                    <div class="image-grid">
+                        <img src="assets/images/simulation-screenshot-photo-1.png" alt="Simulation Screenshot 1">
+                        <img src="assets/images/HuihuanQian-Lab-photo-1.jpg" alt="Lab Photo 1">
+                        <img src="assets/images/HuihuanQian-Lab-photo-2.jpg" alt="Lab Photo 2">
+                        <video src="assets/videos/HuihuanQian-Lab-video-1.MOV" controls></video>
+                    </div>
                 </div>
             </div>
 
-            <div class="research-entry">
-                <div class="research-image">
-                    <img src="assets/images/bytedance_logo.jpeg" alt="ByteDance Logo">
-                </div>
-                <div class="research-content">
-                    <h3>ByteDance</h3>
-                    <p>Software Development Intern</p>
-                    <p class="duration">Remote · Dec 2023 - Feb 2024</p>
+            <!-- Additional Research Entries -->
+            <!-- Add more research entries as needed -->
+        </div>
+
+        <h2>Internship Experience</h2>
+
+        <!-- Internship Entry -->
+        <div class="research-entry">
+            <div class="research-image">
+                <img src="assets/images/airs_logo.jpeg" alt="AIRS Logo">
+            </div>
+            <div class="research-content">
+                <h3>Shenzhen Institute of Artificial Intelligence and Robotics for Society (AIRS)</h3>
+                <p><b>Undergraduate Research Assistant</b>, Supervisor: Ruoyu Xu<br>
+                    May 2024 - Nov. 2024, Shenzhen, China</p>
+                <ul>
+                    <li>Developed a motion capture-based MPC system in field experimental settings using CasADi and ROS
+                        for controlling a 7-DOF robotic arm in UAV and vessel object transfers.</li>
+                    <li>Achieved a 10% improvement in grasp accuracy by enhancing the robust MPC algorithm.</li>
+                    <li>Upgraded the grasping code to incorporate follow-and-grab functionality, increasing robustness
+                        under shaking conditions.</li>
+                </ul>
+                <!-- Image/Video Section -->
+                <div class="image-grid">
+                    <img src="assets/images/AIRS-photo-1.jpg" alt="AIRS Photo 1">
+                    <img src="assets/images/AIRS-photo-2.jpg" alt="AIRS Photo 2">
                 </div>
             </div>
         </div>
 
+        <!-- Add Project Section Under Internship Experience -->
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="research-entry">
+                <div class="research-content">
+                    <h3>SSC INTERN – An Internship Platform for CUHK-Shenzhen</h3>
+                    <p><b>Team Leader</b><br>
+                        Feb. 2022 - Jun. 2024, Shenzhen, China</p>
+                    <ul>
+                        <li>Led a team to design and implement core components of the internship platform using PHP,
+                            focusing on backend development and user authentication processes.</li>
+                        <li>Conducted market research to identify key user groups, resulting in a tailored user
+                            experience for over 1,200 active users.</li>
+                        <li>Oversaw front-end and back-end integration, contributing to significant growth in user
+                            adoption across universities.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+
+    </div>
+
+    <!-- WeChat QR Code Modal -->
+    <div id="wechatModal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+        <div style="position:relative;">
+            <img src="assets/images/wechat_qr_code.png" alt="WeChat QR Code" style="max-width:90%; max-height:90%;">
+            <span onclick="closeWeChatQRCode()"
+                style="position:absolute; top:10px; right:10px; color:#fff; font-size:30px; cursor:pointer;">&times;</span>
+        </div>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const carouselInner = document.querySelector('.carousel-inner');
-            const images = carouselInner.querySelectorAll('img');
-            const prevBtn = document.querySelector('.carousel-control.prev');
-            const nextBtn = document.querySelector('.carousel-control.next');
-            let index = 0;
-
-            function showImage(idx) {
-                carouselInner.style.transform = `translateX(${-idx * 100}%)`;
-            }
-
-            prevBtn.addEventListener('click', function (e) {
-                e.preventDefault();
-                index = (index > 0) ? index - 1 : images.length - 1;
-                showImage(index);
-            });
-
-            nextBtn.addEventListener('click', function (e) {
-                e.preventDefault();
-                index = (index < images.length - 1) ? index + 1 : 0;
-                showImage(index);
-            });
-        });
+        function showWeChatQRCode() {
+            document.getElementById('wechatModal').style.display = 'flex';
+        }
+        function closeWeChatQRCode() {
+            document.getElementById('wechatModal').style.display = 'none';
+        }
     </script>
 </body>
 
