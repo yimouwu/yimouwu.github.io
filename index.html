@@ -93,8 +93,6 @@
         /* Top Section */
         .top-section {
             display: flex;
-            flex-wrap: wrap;
-            /* 允许子元素换行 */
             justify-content: space-between;
             align-items: flex-start;
             gap: 47px;
@@ -102,8 +100,7 @@
         }
 
         .top-section .left {
-            flex: 1 1 60%;
-            /* 允许左侧内容在必要时调整宽度 */
+            flex: 1;
         }
 
         .top-section .right {
@@ -111,18 +108,6 @@
             flex: 0 0 250px;
             /* Adjusted width */
             position: relative;
-        }
-
-        @media (max-width: 800px) {
-            .top-section {
-                flex-direction: column;
-            }
-
-            .top-section .left,
-            .top-section .right {
-                flex: none;
-                width: 100%;
-            }
         }
 
         /* Carousel Styles */
@@ -194,50 +179,6 @@
             padding: 5px 10px;
             border-radius: 5px;
             font-size: 0.9em;
-        }
-
-        /* Carousel Styles */
-        .carousel {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-inner img {
-            width: 100%;
-            flex-shrink: 0;
-        }
-
-        .carousel-control {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2em;
-            color: rgba(244, 240, 240, 0.5);
-            text-decoration: none;
-            padding: 0 10px;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .carousel-control.prev {
-            left: 0;
-        }
-
-        .carousel-control.next {
-            right: 0;
-        }
-
-        */
-
-        /* .carousel-control:hover {
-            color: rgba(0, 0, 0, 0.8);
         }
 
         /* Sections */
@@ -478,45 +419,46 @@
                 <div class="affiliation">
                     <p>4th-year Undergraduate Student</p>
                     <p>Computer Science and Engineering</p>
-                    <p><a href="https://www.cuhk.edu.cn/en" target="_blank">The Chinese University of Hong Kong,
-                            Shenzhen (CUHK-SZ)</a></p>
+                    <!-- <p><a href="https://www.cuhk.edu.cn/en" target="_blank">The Chinese University of Hong Kong,
+                            Shenzhen (CUHK-SZ)</a></p> -->
                 </div>
                 <div class="social-icons">
                     <a href="mailto:yimouwu0@gmail.com"><i class="fa-regular fa-envelope"></i></a>
                     <a href="https://github.com/yimouwu"><i class="fab fa-github"></i></a>
                     <a href="https://scholar.google.com/"><i class="ai ai-google-scholar"></i></a>
                     <a href="https://www.linkedin.com/in/kevin-y-w-33aa0a315/"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" onclick="showWeChatQRCode()"><i class="fab fa-weixin"></i></a>
                 </div>
 
                 <!-- Biography section -->
                 <p> </p>
                 <h2>Biography</h2>
                 <p>
-                    I'm a 4th-year undergraduate student in the <a href="#">Department of Computer Science and
-                        Engineering</a> at <a href="https://www.cuhk.edu.cn/en" target="_blank">The Chinese University
-                        of Hong Kong, Shenzhen (CUHK-SZ)</a>, advised by <a href="#"
-                        style="color:#4A75E6; text-decoration: underline;">Prof. Huihuan Qian</a>. My research interest
+                    I'm a 4th-year undergraduate student in the Department of Computer Science and
+                    Engineering</a> at The Chinese University
+                    of Hong Kong, Shenzhen (CUHK-SZ)</a>, currently advised by <a
+                        href="https://sse.cuhk.edu.cn/faculty/qianhuihuan"
+                        style="color:#4A75E6; text-decoration: underline;">Prof. Huihuan Qian</a> and <a
+                        href="https://xuruoyuroy.github.io/" style="color:#4A75E6; text-decoration: underline;">Postdoc
+                        Ruoyu Xu</a>. My research interest
                     lies in <strong>Robotics</strong> and <strong>Machine Learning</strong>. I aim to develop advanced
                     control algorithms and intelligent systems for robotic applications.
                 </p>
-                <p>
+                <!-- <p>
                     My research experiences include working on Model Predictive Control (MPC) development for robot
-                    manipulators under the guidance of <a href="#"
-                        style="color:#4A75E6; text-decoration: underline;">Prof. Huihuan Qian</a>, where I implemented
-                    MPC control systems for a 7-DOF robotic arm using CasADi and ROS. This project deepened my
+                    manipulators, where I implemented MPC control systems for a 7-DOF robotic arm using CasADi and ROS.
+                    This project deepened my
                     understanding of kinematic logic and control algorithm development.
-                </p>
+                </p> -->
                 <p>
                     I have also worked as an Undergraduate Research Assistant on Electrocorticography (ECoG) and speech
                     separation in Brain-Computer Interface research under <a href="#"
                         style="color:#4A75E6; text-decoration: underline;">Prof. Haizhou Li</a>, focusing on signal
                     processing and data analysis relevant to handling sensor data in robotic systems.
                 </p>
-                <p>
+                <!-- <p>
                     If you are interested in working with me or have any suggestions, please feel free to contact me via
                     email.
-                </p>
+                </p> -->
                 <div class="contact-note">
                     I am currently applying for Ph.D. and Master's programs starting in Fall 2025. I would be grateful
                     for any opportunity to discuss potential collaborations or receive your guidance.
@@ -524,14 +466,7 @@
                 </div>
             </div>
             <div class="right">
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <img src="assets/images/profile_A.jpeg" alt="Yimou Wu" class="profile-image active">
-                        <img src="assets/images/profile_C.jpeg" alt="Yimou Wu" class="profile-image">
-                    </div>
-                    <a class="carousel-control prev" href="#">&#10094;</a>
-                    <a class="carousel-control next" href="#">&#10095;</a>
-                </div>
+                <img src="assets/images/profile_A.jpeg" alt="Yimou Wu" class="profile-image">
             </div>
         </div>
 
@@ -674,32 +609,6 @@
         </div>
 
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const carouselInner = document.querySelector('.carousel-inner');
-            const images = carouselInner.querySelectorAll('img');
-            const prevBtn = document.querySelector('.carousel-control.prev');
-            const nextBtn = document.querySelector('.carousel-control.next');
-            let index = 0;
-
-            function showImage(idx) {
-                carouselInner.style.transform = `translateX(${-idx * 100}%)`;
-            }
-
-            prevBtn.addEventListener('click', function (e) {
-                e.preventDefault();
-                index = (index > 0) ? index - 1 : images.length - 1;
-                showImage(index);
-            });
-
-            nextBtn.addEventListener('click', function (e) {
-                e.preventDefault();
-                index = (index < images.length - 1) ? index + 1 : 0;
-                showImage(index);
-            });
-        });
-    </script>
 </body>
 
 </html>
