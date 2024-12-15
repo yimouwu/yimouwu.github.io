@@ -47,7 +47,7 @@
 
     .left-icons a {
       color: #333;
-      font-size: 1.2em;
+      font-size: 1.3em;
       text-decoration: none;
     }
 
@@ -55,7 +55,7 @@
       display: flex;
       gap: 25px;
       list-style: none;
-      margin: 1px;
+      margin: 4px;
       padding: 0;
       margin-right: auto;
       /* 让导航按钮靠左对齐 */
@@ -65,7 +65,6 @@
       color: #333;
       text-decoration: none;
       font-size: 0.95em;
-      text-transform: lowercase;
       transition: color 0.3s ease;
     }
 
@@ -110,6 +109,47 @@
     .entry ul li {
       margin-bottom: 5px;
     }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1000;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgba(0, 0, 0, 0.8);
+      /* Black background with opacity */
+    }
+
+    .modal-content {
+      display: block;
+      margin: 5% auto;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 5px;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ff0000;
+    }
   </style>
 </head>
 
@@ -122,6 +162,7 @@
         <a href="https://github.com/yimouwu"><i class="fab fa-github"></i></a>
         <a href="https://scholar.google.com/"><i class="ai ai-google-scholar"></i></a>
         <a href="https://www.linkedin.com/in/kevin-y-w-33aa0a315/"><i class="fab fa-linkedin"></i></a>
+        <a href="#" id="wechat-icon"><i class="fab fa-weixin"></i></a>
       </div>
       <ul class="nav-links">
         <li><a href="index.html">about</a></li>
@@ -133,6 +174,37 @@
       </ul>
     </nav>
   </header>
+
+  <!-- Modal -->
+  <div id="wechat-modal" class="modal">
+    <span class="close" id="close-modal">&times;</span>
+    <img src="assets/images/WechatFriendQRCode.jpg" alt="WeChat QR Code" class="modal-content">
+  </div>
+
+  <script>
+    // JavaScript for modal functionality
+    const wechatIcon = document.getElementById('wechat-icon');
+    const modal = document.getElementById('wechat-modal');
+    const closeModal = document.getElementById('close-modal');
+
+    // Show modal when WeChat icon is clicked
+    wechatIcon.addEventListener('click', function (e) {
+      e.preventDefault();
+      modal.style.display = 'block';
+    });
+
+    // Close modal when close button is clicked
+    closeModal.addEventListener('click', function () {
+      modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
 
   <!-- Main Content -->
   <div class="main-content">
