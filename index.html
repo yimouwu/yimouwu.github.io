@@ -688,6 +688,21 @@
         </div>
 
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const profileImage = document.querySelector(".profile-image");
+            const imageSources = [
+                "assets/images/profile_A.jpeg",
+                "assets/images/profile_2791.jpeg"
+            ];
+            let imgIndex = 0;
+            setInterval(function() {
+                imgIndex = (imgIndex + 1) % imageSources.length;
+                profileImage.src = imageSources[imgIndex];
+            }, 1500);
+        });
+        </script>
 </body>
 
 </html>
