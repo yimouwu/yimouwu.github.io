@@ -545,7 +545,7 @@
                 </div>
             </div>
             <div class="right">
-                <img src="assets/images/profile_A.jpeg" alt="Yimou Wu" class="profile-image">
+                <img src="assets/images/profile_2791.jpeg" alt="Yimou Wu" class="profile-image">
             </div>
         </div>
 
@@ -693,14 +693,14 @@
         document.addEventListener("DOMContentLoaded", function() {
             const profileImage = document.querySelector(".profile-image");
             const imageSources = [
-                "assets/images/profile_A.jpeg",
-                "assets/images/profile_2791.jpeg"
+                "assets/images/profile_2791.jpeg",
+                "assets/images/profile_A.jpeg"
             ];
             let imgIndex = 0;
             setInterval(function() {
                 imgIndex = (imgIndex + 1) % imageSources.length;
                 profileImage.src = imageSources[imgIndex];
-            }, 3000);
+            }, 3700);
         });
         </script>
 </body>
