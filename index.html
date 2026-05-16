@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yimou Wu</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <h1 class="hero-name">Yimou (Kevin) Wu</h1>
+        <p class="hero-sub">Ph.D. Student · [Your University] · Advised by Prof. [Advisor Name]</p>
+
+        <p class="hero-intro">
+          I am a PhD student at <strong>[Your University]</strong>, advised by
+          Prof. <strong>[Advisor Name]</strong>. I work on
+          <strong>3D scene reconstruction</strong>, <strong>dynamic scene understanding</strong>,
+          and visual perception systems that operate in challenging real-world environments —
+          including surgical endoscopy.
+        </p>
+        <p class="hero-intro">
+          My research goal is to build machines that understand
+          <strong>space, motion, and structure</strong> from vision alone — robustly, in the wild.
+        </p>
+        <p class="hero-intro">
+          Previously, I received my B.Eng. from <strong>[Undergraduate University]</strong>.
+          Outside research, I think about philosophy of mind, the mathematics of perception,
+          and the long arc of how intelligence develops.
+        </p>
+
+        <div class="hero-links">
+          <a href="mailto:your@email.com" class="link-txt">Email</a>
+          <span class="link-sep">/</span>
+          <a href="https://github.com/yimouwu" target="_blank" class="link-txt">GitHub</a>
+          <span class="link-sep">/</span>
+          <a href="#" target="_blank" class="link-txt">Google Scholar</a>
+          <span class="link-sep">/</span>
+          <a href="https://linkedin.com" target="_blank" class="link-txt">LinkedIn</a>
+          <span class="link-sep">/</span>
+          <a href="assets/pdf/cv.pdf" target="_blank" class="link-txt">CV</a>
+          <span class="link-sep">/</span>
+          <a href="https://twitter.com/" target="_blank" class="link-txt">Twitter</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <img src="assets/images/profile.jpg" alt="Yimou Wu" class="hero-photo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="hero-photo-placeholder">YW</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PUBLICATIONS ── -->
+  <section id="research" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Publications</h2>
+      <p class="section-sub">
+        * equal contribution &nbsp;† corresponding author &nbsp;&nbsp;
+        Representative papers are <span class="highlight-word">highlighted</span>.
+      </p>
+
+      <div class="pub-list">
+
+        <!-- featured / highlighted paper -->
+        <div class="pub-item pub-featured">
+          <div class="pub-media">
+            <!--
+              To use a video instead:
+              <video autoplay muted loop playsinline>
+                <source src="assets/videos/paper1.mp4" type="video/mp4">
+              </video>
+            -->
+            <img src="assets/images/pub_paper1.jpg" alt=""
+                 onerror="this.parentElement.classList.add('no-media')" />
+          </div>
+          <div class="pub-info">
+            <p class="pub-title">Your Paper Title Here: A Subtitle That Explains the Core Idea</p>
+            <p class="pub-authors">
+              <span class="pub-me">Yimou Wu</span>,
+              Co-Author One, Co-Author Two, Advisor Name
+            </p>
+            <p class="pub-venue">
+              CVPR 2025 &nbsp;<span class="pub-award">Oral</span>
+            </p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">Website</a>
+              <a href="#" class="pub-link">arXiv</a>
+              <a href="#" class="pub-link">Code</a>
+              <a href="#" class="pub-link">Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- normal paper -->
+        <div class="pub-item">
+          <div class="pub-media">
+            <img src="assets/images/pub_paper2.jpg" alt=""
+                 onerror="this.parentElement.classList.add('no-media')" />
+          </div>
+          <div class="pub-info">
+            <p class="pub-title">Second Paper Title: Dynamic Scene Reconstruction from Monocular Video</p>
+            <p class="pub-authors">
+              <span class="pub-me">Yimou Wu</span>,
+              Co-Author One, Advisor Name
+            </p>
+            <p class="pub-venue">NeurIPS 2024</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">arXiv</a>
+              <a href="#" class="pub-link">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- featured / highlighted paper -->
+        <div class="pub-item pub-featured">
+          <div class="pub-media">
+            <img src="assets/images/pub_paper3.jpg" alt=""
+                 onerror="this.parentElement.classList.add('no-media')" />
+          </div>
+          <div class="pub-info">
+            <p class="pub-title">Third Paper Title: Endoscopic Depth and Motion Estimation</p>
+            <p class="pub-authors">
+              <span class="pub-me">Yimou Wu</span>,
+              Co-Author One, Co-Author Two
+            </p>
+            <p class="pub-venue">ICCV 2024</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">Website</a>
+              <a href="#" class="pub-link">arXiv</a>
+              <a href="#" class="pub-link">Code</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /pub-list -->
+    </div>
+  </section>
+
+  <!-- ── BLOG ── -->
+  <section id="blog" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Blog</h2>
+      <p class="section-sub">Thoughts on research, vision, and intelligence.</p>
+      <p class="misc-placeholder">Coming soon.</p>
+    </div>
+  </section>
+
+  <!-- ── TEACHING / SERVICE / AWARDS ── -->
+  <section id="misc" class="section">
+    <div class="section-inner">
+
+      <h2 class="section-title">Teaching</h2>
+      <ul class="misc-list">
+        <li>Teaching Assistant for BMEG 5750: Medical Robotics (2025–2026, CUHK)</li>
+      </ul>
+
+      <h2 class="section-title misc-sub-title">Service</h2>
+      <ul class="misc-list">
+        <li>Academic journal reviewing: IEEE RA-L</li>
+        <li>Conference reviewing: ICRA, IROS, ROBIO</li>
+      </ul>
+
+      <h2 class="section-title misc-sub-title">Awards</h2>
+      <ul class="misc-list">
+        <li>Gold Prize, China International College Students' Innovation Competition, 2025</li>
+        <li>Bronze Prize, The 14th "Challenge Cup" China College Students' Entrepreneurship Competition, 2024</li>
+        <li>School of Science and Engineering Dean's List, CUHK-Shenzhen, 2023</li>
+        <li>The 17–19th Undergraduate Research Awards, CUHK-Shenzhen, 2021–2022</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p>© 2025 Yimou Wu &nbsp;·&nbsp; Last updated May 2025</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
