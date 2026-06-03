@@ -881,3 +881,12 @@ ul  { list-style: none; }
 /* body text darker globally */
 body { color: #111 !important; }
 
+
+/* professor / person name links in hero */
+.hero-prof-link {
+  color: #1a6fc4;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: inherit;
+}
+.hero-prof-link:hover { color: #0d4f9e; }
