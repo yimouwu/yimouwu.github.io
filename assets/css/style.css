@@ -890,3 +890,196 @@ body { color: #111 !important; }
   font-weight: inherit;
 }
 .hero-prof-link:hover { color: #0d4f9e; }
+
+/* ═══════════════════════════════════════════════════════════
+   TOP NAV
+═══════════════════════════════════════════════════════════ */
+#topnav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  padding: 0 24px;
+}
+
+.nav-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-identity {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  margin-right: auto;
+}
+
+.nav-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: -0.01em;
+}
+
+.nav-sub {
+  font-size: 11px;
+  color: #888;
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: #000; }
+
+/* dark mode toggle button */
+#theme-toggle {
+  background: none;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 20px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  transition: all 0.2s;
+  line-height: 1;
+}
+#theme-toggle:hover {
+  border-color: rgba(0,0,0,0.35);
+  color: #000;
+}
+
+/* ── hero section: adjust top padding for sticky nav ── */
+#bio {
+  padding-top: 60px;
+  padding-bottom: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* ── remove ALL section divider lines ── */
+.section + .section { border-top: none !important; }
+#hero + .section    { border-top: none !important; }
+#bio + .section     { border-top: none !important; }
+.section            { border-top: none !important; }
+
+/* ── global font size bump ── */
+body { font-size: 15.5px !important; }
+
+.hero-intro {
+  font-size: 15.5px !important;
+  line-height: 1.72 !important;
+  margin-bottom: 14px !important;
+}
+
+.hero-links { margin-top: 20px !important; }
+
+.link-txt {
+  font-size: 14.5px !important;
+}
+
+.section-title {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  margin-top: 0 !important;
+}
+
+.misc-sub-title { margin-top: 36px !important; }
+
+.section-sub {
+  font-size: 13.5px !important;
+  margin-bottom: 28px !important;
+}
+
+.pub-title  { font-size: 15px !important; }
+.pub-authors{ font-size: 13.5px !important; }
+.pub-venue  { font-size: 13px !important; }
+.pub-link   { font-size: 13px !important; }
+
+.misc-list li { font-size: 15px !important; }
+
+/* ── prof links: blue + underline ── */
+.hero-prof-link {
+  color: #1a6fc4 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px !important;
+  font-weight: inherit !important;
+}
+.hero-prof-link:hover { color: #0d4f9e !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   DARK MODE
+═══════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  --bg:      #111;
+  --surface: #1a1a1a;
+  --border:  rgba(255,255,255,0.08);
+  --text:    #e8e3d8;
+  --text-dim:#a09880;
+}
+
+[data-theme="dark"] body {
+  background: #111 !important;
+  color: #e8e3d8 !important;
+}
+
+[data-theme="dark"] #topnav {
+  background: rgba(17,17,17,0.92) !important;
+  border-bottom-color: rgba(255,255,255,0.07) !important;
+}
+
+[data-theme="dark"] .nav-name  { color: #f0ede8 !important; }
+[data-theme="dark"] .nav-sub   { color: #666 !important; }
+[data-theme="dark"] .nav-links a { color: #ccc !important; }
+[data-theme="dark"] .nav-links a:hover { color: #fff !important; }
+[data-theme="dark"] #theme-toggle { color: #aaa !important; border-color: rgba(255,255,255,0.2) !important; }
+
+[data-theme="dark"] .hero-intro  { color: #c8c0b0 !important; }
+[data-theme="dark"] .link-txt    { color: #7aaddf !important; }
+[data-theme="dark"] .hero-prof-link { color: #7aaddf !important; }
+
+[data-theme="dark"] .section-title { color: #f0ede8 !important; }
+[data-theme="dark"] .section-sub   { color: #666 !important; }
+
+[data-theme="dark"] .pub-item {
+  background: transparent !important;
+  border-top-color: rgba(255,255,255,0.07) !important;
+}
+[data-theme="dark"] .pub-featured {
+  background: rgba(212,170,50,0.06) !important;
+  border-color: rgba(212,170,50,0.18) !important;
+}
+[data-theme="dark"] .pub-title   { color: #f0ede8 !important; }
+[data-theme="dark"] .pub-authors { color: #777 !important; }
+[data-theme="dark"] .pub-me      { color: #f0ede8 !important; }
+[data-theme="dark"] .pub-venue   { color: #999 !important; }
+[data-theme="dark"] .pub-link    { color: #7aaddf !important; }
+[data-theme="dark"] .pub-media   { background: #222 !important; }
+
+[data-theme="dark"] .misc-list li   { color: #c8c0b0 !important; }
+[data-theme="dark"] .misc-placeholder { color: #555 !important; }
+
+[data-theme="dark"] #footer { border-top-color: rgba(255,255,255,0.07) !important; }
+[data-theme="dark"] #footer p { color: #555 !important; }
+
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .nav-sub   { display: none; }
+}

@@ -110,3 +110,29 @@ function toggleAbstract(btn) {
 
 
 /* parallax removed — photo is static */
+/* ═══════════════════════════════════════════════════════════
+   DARK MODE TOGGLE
+═══════════════════════════════════════════════════════════ */
+(function initTheme() {
+  const btn  = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const icon = btn ? btn.querySelector('.theme-icon') : null;
+
+  /* restore saved preference */
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    html.setAttribute('data-theme', saved);
+    if (icon) icon.innerHTML = saved === 'dark' ? '&#9728;' : '&#9790;';
+  }
+
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    const next   = isDark ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    /* sun = light mode, moon = dark mode */
+    if (icon) icon.innerHTML = next === 'dark' ? '&#9728;' : '&#9790;';
+  });
+})();

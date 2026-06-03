@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,20 +7,36 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <canvas id="bg-canvas"></canvas>
 
-  <!-- ── HERO ── -->
-  <section id="hero">
+  <!-- ── TOP NAV ── -->
+  <header id="topnav">
+    <div class="nav-inner">
+      <div class="nav-identity">
+        <span class="nav-name">Yimou (Kevin) Wu</span>
+        <span class="nav-sub">M.Phil. @ CUHK</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#research">Publications</a>
+        <a href="#blog">Blog</a>
+        <a href="#misc">Teaching</a>
+        <a href="#bio">Bio</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">&#9790;</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── HERO / BIO ── -->
+  <section id="bio">
     <div class="hero-inner">
 
       <div class="hero-text">
-        <h1 class="hero-name">Yimou (Kevin) Wu</h1>
-        <p class="hero-sub">M.Phil. @ CUHK</p>
-
         <p class="hero-intro">
           Hello! I'm a M.Phil. student at CUHK, advised by
           Prof. <a href="https://www.surgery.cuhk.edu.hk/profile.asp?alias=lizheng" target="_blank" class="hero-prof-link">Zheng Li</a>.
@@ -71,15 +87,8 @@
 
       <div class="pub-list">
 
-        <!-- featured / highlighted paper -->
         <div class="pub-item pub-featured">
           <div class="pub-media">
-            <!--
-              To use a video instead:
-              <video autoplay muted loop playsinline>
-                <source src="assets/videos/paper1.mp4" type="video/mp4">
-              </video>
-            -->
             <img src="assets/images/pub_paper1.jpg" alt=""
                  onerror="this.parentElement.classList.add('no-media')" />
           </div>
@@ -89,9 +98,7 @@
               <span class="pub-me">Yimou Wu</span>,
               Co-Author One, Co-Author Two, Advisor Name
             </p>
-            <p class="pub-venue">
-              CVPR 2025 &nbsp;<span class="pub-award">Oral</span>
-            </p>
+            <p class="pub-venue">CVPR 2025 &nbsp;<span class="pub-award">Oral</span></p>
             <div class="pub-links">
               <a href="#" class="pub-link">Website</a>
               <a href="#" class="pub-link">arXiv</a>
@@ -101,7 +108,6 @@
           </div>
         </div>
 
-        <!-- normal paper -->
         <div class="pub-item">
           <div class="pub-media">
             <img src="assets/images/pub_paper2.jpg" alt=""
@@ -121,7 +127,6 @@
           </div>
         </div>
 
-        <!-- featured / highlighted paper -->
         <div class="pub-item pub-featured">
           <div class="pub-media">
             <img src="assets/images/pub_paper3.jpg" alt=""
@@ -142,7 +147,7 @@
           </div>
         </div>
 
-      </div><!-- /pub-list -->
+      </div>
     </div>
   </section>
 
@@ -150,7 +155,7 @@
   <section id="blog" class="section">
     <div class="section-inner">
       <h2 class="section-title">Blog</h2>
-      <p class="section-sub">Thoughts on research, vision, and intelligence.</p>
+      <p class="section-sub">Thoughts on research, philosophy, and intelligence.</p>
       <p class="misc-placeholder">Coming soon.</p>
     </div>
   </section>
@@ -181,7 +186,6 @@
     </div>
   </section>
 
-  <!-- footer -->
   <footer id="footer">
     <div class="footer-inner">
       <p>© 2026 Yimou Wu &nbsp;·&nbsp; Last updated May 2025</p>
