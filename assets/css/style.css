@@ -178,8 +178,8 @@ ul  { list-style: none; }
 /* photo */
 .hero-photo-wrap {
   flex-shrink: 0;
-  width: 148px;
-  height: 198px;
+  width: 130px;
+  height: 175px;
   border-radius: 5px;
   overflow: hidden;
   border: 1px solid rgba(0,0,0,0.08);
