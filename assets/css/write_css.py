@@ -1,4 +1,5 @@
-/* ═══════════════════════════════════════════════════
+css = open('/Users/yimouwu/Desktop/yimou/yimouwu.github.io/assets/css/style.css', 'w')
+css.write("""/* ═══════════════════════════════════════════════════
    RESET & TOKENS
 ═══════════════════════════════════════════════════ */
 :root {
@@ -468,3 +469,6 @@ ul  { list-style: none; }
   .nav-links       { display: none; }
   .nav-sub         { display: none; }
 }
+""")
+css.close()
+print("done")
