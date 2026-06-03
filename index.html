@@ -162,16 +162,19 @@
             </p>
             <p class="pub-venue"><strong>arXiv</strong>, 2026</p>
             <div class="pub-links">
-              <a href="#" class="pub-link">arXiv</a>
-              <a href="#" class="pub-link">Code</a>
+              <a href="https://arxiv.org/abs/2508.01415" class="pub-link">arXiv</a>
+              <a href="#Coming_Soon" class="pub-link">Code</a>
             </div>
           </div>
         </div>
 
         <div class="pub-item">
           <div class="pub-media">
-            <img src="assets/images/publication/Neural Network_Aided_Kalman_Filtering_with_Model_Predictive_Control_Enables_Robot-Assisted_UAV_Recovery_and_Suspended_Payload_Capture_on_a_Wavy_Surface/Introduction_and_Illustration.pdf" alt=""
-                 onerror="this.parentElement.classList.add('no-media')" />
+            <video autoplay muted loop playsinline
+                   style="width:100%;height:100%;object-fit:cover;display:block;"
+                   onerror="this.parentElement.classList.add('no-media')">
+              <source src="assets/images/publication/Neural Network_Aided_Kalman_Filtering_with_Model_Predictive_Control_Enables_Robot-Assisted_UAV_Recovery_and_Suspended_Payload_Capture_on_a_Wavy_Surface/video_compressed.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="pub-info">
             <p class="pub-title">Neural Network Aided Kalman Filtering with Model Predictive Control Enables Robot-Assisted UAV Recovery and Suspended Payload Capture on a Wavy Surface</p>
@@ -180,8 +183,8 @@
             </p>
             <p class="pub-venue"><strong>arXiv</strong>, 2025</p>
             <div class="pub-links">
-              <a href="#" class="pub-link">arXiv</a>
-              <a href="#" class="pub-link">Code</a>
+              <a href="https://arxiv.org/abs/2505.09145" class="pub-link">arXiv</a>
+              <a href="#Video" class="pub-link" onclick="openVideoModal('assets/images/publication/Neural Network_Aided_Kalman_Filtering_with_Model_Predictive_Control_Enables_Robot-Assisted_UAV_Recovery_and_Suspended_Payload_Capture_on_a_Wavy_Surface/video_compressed.mp4'); return false;">Video</a>
             </div>
             <p class="pub-note">This work was completed but has not been submitted to any conference or journal. The decision reflects timing constraints and considerations among the authors. The arXiv version is a preliminary draft containing unverified sections; the released video and methodology are provided for reference only.</p>
           </div>
@@ -211,16 +214,13 @@
 
       <h2 class="section-title misc-sub-title">Service</h2>
       <ul class="misc-list">
-        <li>Academic journal reviewing: IEEE RA-L</li>
-        <li>Conference reviewing: ICRA, IROS, ROBIO</li>
+        <li>Academic journal reviewing: xxx</li>
+        <li>Conference reviewing: xxx, xxx, xxx</li>
       </ul>
 
       <h2 class="section-title misc-sub-title">Awards</h2>
       <ul class="misc-list">
         <li>Gold Prize, China International College Students' Innovation Competition, 2025</li>
-        <li>Bronze Prize, The 14th "Challenge Cup" China College Students' Entrepreneurship Competition, 2024</li>
-        <li>School of Science and Engineering Dean's List, CUHK-Shenzhen, 2023</li>
-        <li>The 17–19th Undergraduate Research Awards, CUHK-Shenzhen, 2021–2022</li>
       </ul>
 
     </div>
@@ -231,6 +231,16 @@
       <p>© 2026 Yimou Wu &nbsp;·&nbsp; Last updated May 2025</p>
     </div>
   </footer>
+
+  <!-- video modal -->
+  <div id="video-modal" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;">
+    <div style="position:relative;width:90%;max-width:900px;">
+      <button onclick="closeVideoModal()" style="position:absolute;top:-36px;right:0;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;">✕</button>
+      <video id="modal-video" controls style="width:100%;border-radius:8px;display:block;">
+        <source id="modal-video-src" src="" type="video/mp4" />
+      </video>
+    </div>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
