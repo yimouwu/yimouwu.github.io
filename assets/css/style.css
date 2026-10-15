@@ -2,7 +2,7 @@
    RESET & TOKENS
 ═══════════════════════════════════════════════════ */
 :root {
-  --max-w:      1080px;
+  --max-w:      960px;
   --brown:      #8a6a2e;
   --brown-dim:  rgba(138,106,46,0.10);
   --gold-bg:    rgba(212,170,50,0.07);
@@ -135,11 +135,11 @@ ul  { list-style: none; }
 /* Bio text: Inter at 400 looks visually heavier than DM Sans at same size */
 .hero-intro {
   font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   color: #111;
   font-weight: 400;
-  line-height: 1.78;
-  margin-bottom: 14px;
+  line-height: 1.75;
+  margin-bottom: 13px;
 }
 
 .hero-prof-link {
@@ -225,7 +225,7 @@ ul  { list-style: none; }
 }
 
 .section-title {
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: #000;
   letter-spacing: -0.02em;
@@ -277,8 +277,8 @@ ul  { list-style: none; }
 
 .pub-media {
   flex-shrink: 0;
-  width: 260px;
-  height: 156px;
+  width: 230px;
+  height: 138px;
   border-radius: 6px;
   overflow: hidden;
   background: #f0ede8;
@@ -295,16 +295,17 @@ ul  { list-style: none; }
 .pub-info { flex: 1; min-width: 0; }
 
 .pub-title {
-  font-size: 1.12rem;
-  font-weight: 600;
-  color: #1a6fc4;
-  line-height: 1.42;
-  margin-bottom: 6px;
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.4;
+  margin-bottom: 5px;
 }
-.pub-title:hover { color: #0d4f9e; text-decoration: underline; text-underline-offset: 2px; }
+.pub-title a { color: #111; text-decoration: none; transition: color var(--transition); }
+.pub-title a:hover { color: #1a6fc4; text-decoration: underline; text-underline-offset: 2px; }
 
 .pub-authors {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #666;
   font-weight: 300;
   margin-bottom: 5px;
@@ -332,9 +333,9 @@ ul  { list-style: none; }
 }
 
 .pub-venue {
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   color: #555;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .pub-award {
@@ -358,7 +359,7 @@ ul  { list-style: none; }
 }
 
 .pub-link {
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   color: #1a6fc4;
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -521,6 +522,8 @@ ul  { list-style: none; }
 [data-theme="dark"] .pub-item    { border-top-color: rgba(255,255,255,0.06) !important; }
 [data-theme="dark"] .pub-featured { background: rgba(212,170,50,0.06) !important; border-color: rgba(212,170,50,0.18) !important; }
 [data-theme="dark"] .pub-title   { color: #eee !important; }
+[data-theme="dark"] .pub-title a { color: #eee !important; }
+[data-theme="dark"] .pub-title a:hover { color: #7aaddf !important; }
 [data-theme="dark"] .pub-authors { color: #666 !important; }
 [data-theme="dark"] .pub-me      { color: #eee !important; }
 [data-theme="dark"] .pub-venue   { color: #888 !important; }
