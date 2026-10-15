@@ -337,6 +337,10 @@ ul  { list-style: none; }
   color: #555;
   margin-bottom: 9px;
 }
+.pub-venue-sec {
+  color: #999;
+  font-weight: 400;
+}
 
 .pub-award {
   display: inline-block;
@@ -526,6 +530,7 @@ ul  { list-style: none; }
 [data-theme="dark"] .pub-authors { color: #666 !important; }
 [data-theme="dark"] .pub-me      { color: #eee !important; }
 [data-theme="dark"] .pub-venue   { color: #888 !important; }
+[data-theme="dark"] .pub-venue-sec { color: #666 !important; }
 [data-theme="dark"] .pub-link    { color: #7aaddf !important; }
 [data-theme="dark"] .pub-media   { background: #222 !important; }
 [data-theme="dark"] .pub-note    { color: #555 !important; }
