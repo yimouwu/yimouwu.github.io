@@ -1,0 +1,152 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.45in,bottom=0.45in,left=0.55in,right=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\hypersetup{pdftitle={Yimou Wu - Research CV},pdfauthor={Yimou Wu}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5pt}
+\urlstyle{same}
+\raggedbottom
+
+% ---- section rule ----
+\newcommand{\cvsection}[1]{%
+  \par\addvspace{2pt}{\large\bfseries #1}\par\nobreak
+  \vspace{0.5pt}\hrule\vspace{1pt}}
+% ---- school / affiliation line: title (left) + date (right) + detail below ----
+\newcommand{\school}[3]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}Xr@{}}
+    \textbf{#1} & #2
+  \end{tabularx}\par #3\par}
+% ---- entry heading with role (left) and date (right) ----
+\newcommand{\role}[2]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}Xr@{}}
+    #1 & #2
+  \end{tabularx}}
+% ---- paper: link + title, then authors | venue ----
+\newcommand{\paper}[4]{%
+  \par\addvspace{1.5pt}\textbf{\href{#1}{#2}}\par
+  {\small #3\enspace\textbar\enspace\emph{#4}\par}}
+\newcommand{\me}{\textbf{Y. Wu}}
+% ---- compact bullet list ----
+\newenvironment{tight}{\begin{itemize}[leftmargin=1.2em,itemsep=0.5pt,topsep=1pt,parsep=0pt]}{\end{itemize}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Yimou (Kevin) Wu}\\[2pt]
+  \href{mailto:yimouwu@link.cuhk.edu.hk}{yimouwu@link.cuhk.edu.hk}
+  \enspace|\enspace \href{https://yimouwu.com}{yimouwu.com}
+  \enspace|\enspace
+  \href{https://scholar.google.com/citations?user=6kbLcKYAAAAJ}{Google Scholar}
+  \enspace|\enspace \href{https://github.com/yimouwu}{GitHub}
+\end{center}
+
+%=====================================================================
+\cvsection{Research Interests}
+Embodied AI and robot learning---geometry-grounded perception,
+memory-augmented decision making, and real-time control. Central question:
+how can a robot know when its spatial beliefs are still reliable, and when it should look, remember, or act again?
+
+%=====================================================================
+\cvsection{Education}
+\school{The Chinese University of Hong Kong}{2025--present}
+  {MPhil in Surgery (robotics), Faculty of Medicine.
+   Advisor: Prof. Zheng Li. Embodied perception and control.}
+\school{The Chinese University of Hong Kong, Shenzhen}{2021--2025}
+  {BEng in Computer Science and Engineering, School of Data Science.}
+  % Optional GPA line (undergraduate); uncomment only if a program requires it:
+  % {\small GPA: 3.13/4.0.}\par
+\school{University of California, Berkeley}{}
+  {Visiting Student. % Add verified dates / host once confirmed.
+  }
+
+%=====================================================================
+\cvsection{Selected Research Experience}
+
+\role{\textbf{Prior-Aware 3D Perception \textnormal{(VPGGT)} --- First author}}{2025--2026}
+\begin{tight}
+  \item Identified \emph{prior dilution}: a feed-forward reconstruction model can return a
+        camera pose \emph{worse} than the estimate it was given, even when that prior is exact.
+  \item Designed the \textbf{Prior Residual Connection}, a parameter-free scheme that resets the
+        camera head's refinement state to the supplied prior, so residual updates correct rather than discard it.
+  \item Added \textbf{Metric Global Attention} to recover a shared physical scale from pose/depth
+        statistics; gains up to \textbf{+33.6}~pp RTA@5\textdegree{} and \textbf{+19.1}~pp AUC@30\textdegree{} on C3VD.
+\end{tight}
+
+\role{\textbf{Memory for Long-Horizon Robot Planning \textnormal{(RoboMemory)} --- Co-first author}}{2025}
+\begin{tight}
+  \item Co-built a brain-inspired framework unifying temporal, spatial, semantic, and
+        episodic memory with a dynamic spatial knowledge graph.
+  \item On EmbodiedBench, raised the average success rate of Qwen2.5-VL-72B by
+        \textbf{+26.5}~pp (44.0\%~$\rightarrow$~70.5\%), matching strong closed-source VLM agents.
+\end{tight}
+
+\role{\textbf{Robot-Assisted Drone Recovery on a Wavy Surface --- First author}}{2024--2025}
+\begin{tight}
+  \item Proposed \textbf{KalmanNet++}, a neural-network-aided Kalman filter predicting a
+        drone's position 0.1\,s ahead, coupled with receding-horizon MPC for real-time capture;
+        $>$95\% success, up to +10\% efficiency and +20\% precision over baselines.
+\end{tight}
+
+\role{\textbf{Control \& Benchmarking \textnormal{(Magnetic Localization; OmniPiano)}} --- Contributor}{2023--2026}
+\begin{tight}
+  \item Contributed to a fast magnetic-source localization method (IJRR 2026) and to OmniPiano,
+        a modular dexterous-manipulation benchmark (1--5 Shadow Hands; 912 task settings; standard/robust/safe/multi-agent RL).
+\end{tight}
+
+%=====================================================================
+\cvsection{Peer-Reviewed Publications}
+\paper{https://sp4595.github.io/robomemory/}
+  {RoboMemory: A Brain-inspired Multi-memory Agentic Framework for
+   Interactive Environmental Learning in Physical Embodied Systems}
+  {M. Lei*, H. Cai*, Y. Yang*, \me*, et al. (*equal contribution)}
+  {Conference on Robot Learning (CoRL), 2026}
+\paper{https://doi.org/10.1177/02783649261455368}
+  {Particle Importance Analysis: A Fast Localization Method under
+   Indeterminate Magnetic Sources}
+  {R. Xu, Y. Sun, \me, Y. Li, Z. Li}
+  {International Journal of Robotics Research (IJRR), 2026}
+
+%=====================================================================
+\cvsection{Preprints}
+\paper{https://arxiv.org/abs/2610.05531}
+  {Deep Prior Learning for Embodied Perception (VPGGT)}
+  {\me, J. Guo, Y.-h. Liu, Z. Li}{arXiv:2610.05531, 2026}
+\paper{https://arxiv.org/abs/2611.00243}
+  {OmniPiano: Diverse Dexterous Piano-Playing Challenges for
+   Standard, Robust, Safe, and Multi-Agent RL}
+  {F. Xu, F. Yang, Y. Xu, R. Zhang, \me, et al.}
+  {arXiv:2611.00243, 2026}
+\paper{https://arxiv.org/abs/2505.09145v3}
+  {Neural Network Aided Kalman Filtering with Model Predictive Control
+   Enables Robot-Assisted Drone Recovery on a Wavy Surface}
+  {\me, M. Liang, C. Liu, Z. Cao, R. Xu, H. Qian}
+  {arXiv:2505.09145, 2025 (preliminary draft)}
+
+%=====================================================================
+\cvsection{Honors \& Awards}
+\begin{tight}
+  \item \textbf{Outstanding Graduate}, School of Data Science, CUHK-Shenzhen
+        (top $\sim$17\%, 36/210). \hfill 2025
+  \item \textbf{Second Prize}, 14th Chinese Mathematics Competitions
+        (non-mathematics majors). \hfill 2023
+  \item Peer Advisor Award, School of Data Science, CUHK-Shenzhen. \hfill 2023
+\end{tight}
+
+%=====================================================================
+\cvsection{Technical Skills}
+\textbf{Languages:} Python, C/C++, MATLAB. \quad \textbf{Tools:} ROS, Linux, Git, CUDA, simulation.\par
+\textbf{ML / Robotics:} PyTorch; 3D vision \& pose estimation (VGGT-family); Kalman filtering; MPC; RL; LLM/VLM agents; spatial knowledge graphs.
+
+%=====================================================================
+\cvsection{Teaching \& Service}
+\role{Teaching Assistant, BMEG 5750: Medical Robotics, CUHK}{2025--2026}
+\role{President, School of Data Science Student Club (SSC), CUHK-Shenzhen}{2023--2024}
+
+\end{document}
